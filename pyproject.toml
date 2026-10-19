@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "lan-safety"
+version = "0.1.0"
+description = "Inventario della rete locale con rilevamento di device sconosciuti (ARP, mDNS, SNMP, MAC vendor, SQLite)"
+requires-python = ">=3.9"
+readme = "README.md"
+authors = [{ name = "Lucia Ushka" }]
+license = { text = "MIT" }
+dependencies = []
+
+[project.scripts]
+lan-safety = "lan_safety.cli:main"
+
+[tool.setuptools]
+packages = ["lan_safety"]
+
+[tool.setuptools.package-data]
+lan_safety = ["data/*.csv"]
